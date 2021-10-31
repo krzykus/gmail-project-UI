@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import GoogleLoginButton from './components/google/GoogleLoginButton';
 const apiURL = "http://localhost:3001";
 
 
@@ -32,6 +33,8 @@ function App() {
         </a>
         <br />
         <Ping />
+        <br />
+        <GoogleLoginButton buttonText="Login with Google"></GoogleLoginButton>
       </header>
     </div>
   );
