@@ -1,5 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+const apiURL = "http://localhost:3001";
+
+
+function Ping() {
+  const pingPong = async () => {
+    fetch(apiURL+"/ping")
+      .then((response)=>response.text())
+      .then((respStr)=>console.log(respStr))
+  }
+  return (
+    <a href="#" onClick={pingPong}>Ping</a>
+  )
+}
 
 function App() {
   return (
@@ -17,6 +30,8 @@ function App() {
         >
           Learn React
         </a>
+        <br />
+        <Ping />
       </header>
     </div>
   );
